@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: go-apmasgvi 
+  janus-idp.io/tekton: go-apmasgvi
+  backstage.io/kubernetes-id: go-apmasgvi
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-apmasgvi
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
